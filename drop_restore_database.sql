@@ -10,7 +10,7 @@
 
 
 --Azure
-
---DROP DATABASE [ngage_glo_Test]
-
---RESTORE DATABASE [ngage_glo_Test2] FROM  URL = N'https://mainuatsqlstorage.blob.core.windows.net/savsm-db-azebackups/ngage_glo_uat_backup_2021_11_18_000551.bak'
+--DROP DATABASE [Database_name]
+--RESTORE DATABASE [Database_Name] FROM  URL = N''
+--RESTORE DATABASE [Database_Name] FROM  URL = N'', 
+-- URL = N''
