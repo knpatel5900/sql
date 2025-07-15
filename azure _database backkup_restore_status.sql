@@ -12,3 +12,16 @@ FROM
     sys.dm_exec_requests r
 WHERE 
     r.command IN ('BACKUP DATABASE', 'BACKUP LOG');
+
+
+
+    SELECT 
+    r.session_id,
+    r.command,
+    r.percent_complete,
+    r.start_time,
+    r.status,
+    d.text AS query_text
+FROM sys.dm_exec_requests r
+CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) d
+WHERE r.command IN ('RESTORE DATABASE', 'RESTORE LOG');
