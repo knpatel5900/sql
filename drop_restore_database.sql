@@ -11,6 +11,6 @@
 
 --Azure
 --DROP DATABASE [Database_name]
---RESTORE DATABASE [Database_Name] FROM  URL = N''
+
 --RESTORE DATABASE [Database_Name] FROM  URL = N'', 
--- URL = N''
+-- URL = N''s
