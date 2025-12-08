@@ -14,11 +14,11 @@ select ESPACE_ID,* from  dbo.ossys_Tenant where name = @tenant
 
 --Update Password
 -- Update query with concatenation
---update dbo.OSSYS_USER set PASSWORD='$1$M1+DIUOd92AvbGMSZtO7AMo/cieghJjO8qz9p79c1IE=6264E9974A9A90223540C0D378E7B4BACC23053738539210B2DF0F568D13AB20A866D0C388C04BED18E8DE9248B36985062B5886821ECA1666B42DF3A77A4129' 
+--update dbo.OSSYS_USER set PASSWORD='$1$lQZNVvq3vZp0P++kagzgf/ogJySGfSEySMCa2Bh2euY=34F32077D37162FBDB15AC41D07E6F0CA7C94C1929945F4907255B7875CB8189ECB8DAD76AA13D0C3BFF843ABF65B5DACE581D95D814AA32F8596D376F301DEB' 
 --where TENANT_ID= @tenantid and name IN (
 --    'admin_' + @tenant + '_' + @prod,
 --    'apiuser_' + @tenant + '_' + @prod,
---    'wfapiuser_' + @tenant + '_' + @prod
+--    'wfapiuser_' + @tenant + '_' + @prod,
 --    'statementuser_' + @tenant + '_' + @prod
 --);
 
