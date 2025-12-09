@@ -1,6 +1,3 @@
--- Table: public.account_report_lead
-
--- DROP TABLE IF EXISTS public.account_report_lead;
 
 CREATE TABLE IF NOT EXISTS public.account_report_lead
 (
@@ -25,9 +22,6 @@ GRANT ALL ON TABLE public.account_report_lead TO savadmin;
 
 --Create Sequence
 
--- SEQUENCE: public.account_report_lead_Id_seq
-
--- DROP SEQUENCE IF EXISTS public."account_report_lead_Id_seq";
 
 CREATE SEQUENCE IF NOT EXISTS public."account_report_lead_Id_seq"
     INCREMENT 1
