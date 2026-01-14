@@ -1,0 +1,2 @@
+SELECT id, batchnumber, stmtdate, stmtkeytype, accountnumber, stmttype, partyid, datarecordtype, data, productsubtype, print, templateid, documentid, notify, partygroup, customerid, isorganization, mailname, mailstreet, mailstreet2, mailcity, mailstate, mailzip, mailcountry, mailname2, createddate, batchtype, directory
+	FROM public.statementdata where batchnumber='7e0533b0-8ef8-4f57-93c7-74c74ecb0266';
