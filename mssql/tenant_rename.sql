@@ -12,3 +12,6 @@ WHERE ID = @tenantid
 
 select * from  dbo.ossys_Tenant
 WHERE ID = @tenantid
+
+
+
