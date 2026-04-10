@@ -44,3 +44,25 @@ order by stage, state;
 
 
 select createddate, * from statementerror where createddate > '2/1/2026' and createddate < '2/2/2026'  order by ID desc limit 100
+
+
+select id, batchnumber, parentbatchnumber, createddate, * from statementbatch WHERE CREATEDDATE > '2/1/2026' order by id desc
+
+
+[3:53 PM]-- use the following one to get the batch number
+select id, batchnumber, parentbatchnumber, createddate, * from statementbatch WHERE CREATEDDATE > '2/1/2026' order by id desc
+
+-- set the var with the batch nunber
+set session vars.b = 'fc73e0ce-05df-4e37-a25e-66abdfbd31d6' 
+
+SELECT s.id, s.batchnumber, g.description, g.id, t.description, s.createddate, t.id, s.customersuccesscount, s.accountsuccesscount, s.notificationsuccesscount, s.duration, s.softversion, * 
+FROM statementsummary s
+JOIN stage g on s.stage = g.id
+JOIN processstate t on s.state = t.id
+WHERE s.batchnumber = current_setting('vars.b')::uuid 
+ORDER BY s.id, stage, state;
+
+SELECT count(id) FROM statementdata where batchnumber = current_setting('vars.b')::uuid
+
+
+select Count(id) from public.statement_x_document  where batchnumber =''

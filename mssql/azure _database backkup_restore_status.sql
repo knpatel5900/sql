@@ -15,6 +15,7 @@ WHERE
 
 
 
+
     SELECT 
     r.session_id,
     r.command,
